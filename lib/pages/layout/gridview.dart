@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
-class WrapPage extends StatelessWidget {
-  final arguments;
+class GridViewPage extends StatefulWidget {
+  final Map arguments;
+  GridViewPage({Key key,this.arguments}) : super(key: key);
 
-  const WrapPage({Key key,this.arguments}): super(key: key);
+  @override
+  _GridViewPageState createState() => _GridViewPageState(arguments:this.arguments);
+}
+
+class _GridViewPageState extends State<GridViewPage> {
+  final Map arguments;
+  _GridViewPageState({this.arguments});
   
   // 一个渐变颜色的正方形集合
   List<Widget> Boxs() => List.generate(30, (index) {
@@ -29,15 +36,22 @@ class WrapPage extends StatelessWidget {
         );
       });
  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(arguments['text']),),
-      body: Wrap(
-        spacing: 10, // 主轴上子控件的间距
-        runSpacing: 10, // 交叉轴上子控件之间的间距
-        children: Boxs(), // 要显示的子控件集合
-      ),
+      body: GridView(
+              scrollDirection: Axis.vertical,
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 100, //子控件最大宽度为100
+                childAspectRatio: 0.5,//宽高比为1:2
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+              ),
+              padding: EdgeInsets.all(10),
+              children: Boxs(),
+            ),
     );
   }
 }

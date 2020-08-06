@@ -6,7 +6,7 @@ class FlowPage extends StatelessWidget {
 
   const FlowPage({Key key, this.arguments}) : super(key: key);
 
-  /*一个带渐变颜色的正方形*/
+  // 一个带渐变颜色的正方形
   Widget Box(index) => Container(
         width: boxSize,
         height: boxSize,

@@ -1,25 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/widget/button.dart';
 
-class LayoutPage extends StatelessWidget {
+class BasePage extends StatelessWidget {
   final arguments;
-
-  const LayoutPage({Key key,this.arguments}) : super(key: key);
-
+  const BasePage({Key key,this.arguments}) : super(key: key);
+  
   // 配置
   static const arr = [
-     {
-       'text':'Wrap布局示例',
-       'link':'/wrap'
-     },
-     {
-       'text':'Flow布局示例',
-       'link':'/flow'
-     },
-     {
-       'text':'GridView布局示例',
-       'link':'/gridview'
-     }
+     {'text': '按钮示例', 'link': '/button'},
+     {'text': '文本输入框示例', 'link': '/input'},
+     {'text': '文本示例', 'link': '/text'}
   ];
   
   // 组装配置信息
@@ -29,6 +19,7 @@ class LayoutPage extends StatelessWidget {
     });
     return tempList.toList();
   }
+
 
   @override
   Widget build(BuildContext context) {
