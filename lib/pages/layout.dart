@@ -9,16 +9,20 @@ class LayoutPage extends StatelessWidget {
   // 配置
   static const arr = [
      {
-       'text':'Wrap布局示例',
+       'text':'Wrap布局示例-可以让子控件自动换行的控件',
        'link':'/wrap'
      },
      {
-       'text':'Flow布局示例',
+       'text':'Flow流式布局示例',
        'link':'/flow'
      },
      {
-       'text':'GridView布局示例',
+       'text':'GridView网格布局示例',
        'link':'/gridview'
+     },
+     {
+       'text':'Row/column布局示例-水平方向排列子控件',
+       'link':'/row'
      }
   ];
   

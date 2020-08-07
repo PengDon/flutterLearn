@@ -10,6 +10,7 @@ import 'package:flutter_learn/pages/layout.dart';
 import 'package:flutter_learn/pages/layout/wrap.dart';
 import 'package:flutter_learn/pages/layout/flow.dart';
 import 'package:flutter_learn/pages/layout/gridview.dart';
+import 'package:flutter_learn/pages/layout/row.dart';
 
 
 // 路由配置
@@ -26,6 +27,7 @@ final routes = {
   '/wrap': (context, {arguments}) => WrapPage(arguments: arguments),
   '/flow': (context, {arguments}) => FlowPage(arguments: arguments),
   '/gridview': (context, {arguments}) => GridViewPage(arguments: arguments),
+  '/row': (context, {arguments}) => RowPage(arguments: arguments),
  
 };
 
